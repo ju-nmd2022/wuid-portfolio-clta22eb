@@ -10,12 +10,12 @@ h1,h2 {
     font-family: "quicksand", sans-serif;
     color: #EAEFD3;
 }
-p, li {
+p {
     font-family:'Trebuchet MS', Arial, sans-serif;
     color: #27233A;
-    margin-right: 380px;
+    margin-left: 380px;
     text-align: justify;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 * {
     background-color: #B3C0A4;
