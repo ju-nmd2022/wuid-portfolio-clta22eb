@@ -35,14 +35,26 @@ img {
     border-color: #EAEFD3;
     border-style: solid;
     float: left;
-    position: fixed;
+    position: absolute;
     top:80px;
     left: 15px;
     margin-left: 15px;
     border-radius: 10px;
 }
 ul {
-    margin-left: 650px;
-    font-family: 'Arial Narrow Bold', sans-serif;
+    /* margin-left: 650px; */
+    font-family:'Trebuchet MS', Arial, sans-serif;
     color: #27233A;
+    margin-right: -400px;
+    padding-right: 300px;
+    margin-top: -10px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 650px;
+    width: 800px;
 }
