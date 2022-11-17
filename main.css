@@ -4,15 +4,13 @@
 h1,h2 {
     font-family: "quicksand", sans-serif;
     color: #EAEFD3;
-    margin-right: 380px;
-    margin-left: 10px;
+    /* margin-right: 380px; */
 }
 p, li {
     font-family:'Trebuchet MS', Arial, sans-serif;
     color: #27233A;
-    margin-right: 380px;
+    /* margin-right: 380px; */
     text-align: justify;
-    margin-left: 10px;
 }
 img {
     border-width: 5px;
@@ -20,15 +18,20 @@ img {
     border-style: solid;
     float: right;
     position: absolute;
-    top:15px;
+    /* top:15px;
     right:15px;
-    margin-left: 10px;
+    margin-left: 10px; */ 
     border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
 }
+
 footer {
-    position: fixed;
     bottom:0%;
-    color:#EAEFD3
+    color:#EAEFD3;
+    padding-top: 10px;
+    grid-area: footer;
+    justify-self: center;
 }
 h1 {
     background-color: #EAEFD3;
@@ -36,7 +39,7 @@ h1 {
     padding-top: 5px;
     padding-bottom: 5px;
     text-align: center;
-    margin-right: 380px;
+    /* margin-right: 380px; */
     border-radius: 10px;
 }
 ul {
@@ -60,26 +63,69 @@ p1 {
     font-family: "quicksand", sans-serif;
     color: #EAEFD3;
     font-size: 35px;
-    float: right;
-    position: absolute;
-    top:390px;
+    /* float: right;
+    position: absolute; */
+    /* top:390px;
     right:15px;
-    margin-left: 10px;
+    margin-left: 10px; */
     background-color: transparent;
 }
 p2 {
     font-family: "quicksand", sans-serif;
     color: #EAEFD3;
     font-size: 35px;
-    float: right;
-    position: absolute;
-    top:440px;
+    /* float: right; */
+    /* position: absolute; */
+    /* top:440px;
     right:15px;
-    margin-left: 10px;
+    margin-left: 10px; */
     background-color: transparent;
 }
 
-footer {
-    font-family: "quicksand", sans-serif;
-    color: #EAEFD3;
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 380px;
+    grid-template-rows: auto 1fr 20px;
+    grid-gap: 20px;
+    grid-template-areas:
+    "head picture" 
+    "aboutme picture"
+    "footer footer";
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 380px auto 20px;
+        grid-template-areas: 
+        "head"
+        "picture"
+        "aboutme" 
+        "footer";
+    }
+    p1,p2 {
+        display: none;
+    }
+}
+
+.aboutme {
+    grid-area: aboutme;
+}
+
+.picture {
+    grid-area: picture;
+    /* display: flex;
+    flex-direction: row; */
+}
+
+/* .footer {
+    grid-area: footer;
+    align-self: center;
+} */
+
+.head {
+    grid-area: head;
 }
