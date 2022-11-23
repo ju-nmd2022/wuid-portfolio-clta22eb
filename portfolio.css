@@ -13,7 +13,7 @@ h1 {
 }
 
 img:hover {
-    color: black;
+    background-color: black;
 }
 
 .flex {
@@ -21,6 +21,7 @@ img:hover {
     flex-wrap: wrap;
     gap: 20px;
     align-self: center;
+    position: fixed;
 }
 
 img {
@@ -32,7 +33,28 @@ img {
     border-style: solid;
 }
 
-img:hover {
+/* img:hover {
     fill: rgba(0,0,0,0.5);
     background-color: rgba(0,0,0,0.5);
+} */
+
+img:hover {
+    opacity:0.2;
 }
+
+/* p {
+    width: 300px;
+    height: 300px;
+    border: #EAEFD3;
+    text-align: center;
+    text-justify: center;
+    margin-top: 150px;
+    font-family: "quicksand", sans-serif;
+    color: #EAEFD3;
+    opacity:0;
+    background-color: transparent;
+} */
+
+/* p:hover {
+    opacity:1;
+} */

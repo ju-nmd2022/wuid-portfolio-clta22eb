@@ -16,8 +16,8 @@ img {
     border-width: 5px;
     border-color: #EAEFD3;
     border-style: solid;
-    float: right;
-    position: absolute;
+    /* float: right; */
+    /* position: absolute; */
     /* top:15px;
     right:15px;
     margin-left: 10px; */ 
@@ -86,10 +86,11 @@ p2 {
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 380px;
-    grid-template-rows: auto 1fr 20px;
+    grid-template-rows: 580px auto 1fr 20px;
     grid-gap: 20px;
-    grid-template-areas:
-    "head picture" 
+    grid-template-areas: 
+    "hero hero"
+    "head picture"
     "aboutme picture"
     "footer footer";
 }
@@ -98,9 +99,11 @@ p2 {
     .container {
         display: grid;
         height: 100vh;
+        gap: 5px;
         grid-template-columns: 1fr;
-        grid-template-rows: auto 380px auto 20px;
+        grid-template-rows: auto auto 380px auto 20px;
         grid-template-areas: 
+        "hero"
         "head"
         "picture"
         "aboutme" 
@@ -108,6 +111,9 @@ p2 {
     }
     p1,p2 {
         display: none;
+    }
+    .picture {
+        margin-top: none;
     }
 }
 
@@ -119,6 +125,8 @@ p2 {
     grid-area: picture;
     /* display: flex;
     flex-direction: row; */
+    margin-top: 20px;
+
 }
 
 /* .footer {
@@ -128,4 +136,74 @@ p2 {
 
 .head {
     grid-area: head;
+}
+
+.hero {
+    grid-area: hero;
+    /* max-height: 100%;
+    max-width: 100%; */
+    border: none;
+    justify-self: center;
+    align-self: center;
+    max-width: max-content;
+    margin-top: 30px;
+}
+
+.herotext,.herotext2 {
+    font-family: "quicksand", sans-serif;
+    grid-area: hero;
+    background-color: transparent;
+    font-size: 40px;
+    color:#EAEFD3;
+    margin-top: 100px;
+}
+
+.herotext {
+    animation-name: hero;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.herotext2 {
+    animation-name: hero2;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hero {
+    0% {
+        transform:translateX(-70%);
+        transform: rotateX(0%);
+    }
+    30% {
+        transform: rotate(10deg);
+        color: #faadd8;
+    }
+    70% {
+        transform:translateX(100%);
+        color:#EAEFD3;
+    }
+    100% {
+        transform:translateX(100%);
+    }
+}
+
+@keyframes hero2 {
+    0% {
+        transform:translateX(-70%);
+        transform: rotateX(0%);
+        color:#EAEFD3;
+    }
+    30% {
+        transform: translateX(-70%);
+    }
+    70% {
+        transform: rotate(-10deg);
+        color:#EAEFD3;
+    }
+    100% {
+        transform:translateX(100%);
+        color: #faadd8;
+    }
 }
